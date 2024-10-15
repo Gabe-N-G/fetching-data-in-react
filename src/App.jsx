@@ -5,7 +5,7 @@ import * as weatherService from './services/weatherService.js'
 //alternatively  
 //import {show} from './services/weatherService.js'
 import WeatherSearch from './components/WeatherSearch.jsx'
-
+import WeatherDetails from './components/WeatherDetails.jsx'
 
 const App = () => {
   const [weather,setWeather] = useState({})
@@ -26,7 +26,7 @@ const App = () => {
     <main>
       <h1>Weather API</h1>
       <WeatherSearch fetchData={fetchData}/>
-      {/* <button onClick={fetchData}>Fetch Weather Data</button> */}
+      <WeatherDetails weather={weather}/>
     </main>
   );
 };
